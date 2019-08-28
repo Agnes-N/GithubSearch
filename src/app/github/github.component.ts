@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubComponent implements OnInit {
 
+  title = 'Github'
+
   constructor() { }
 
   ngOnInit() {
