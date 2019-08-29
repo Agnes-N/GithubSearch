@@ -14,9 +14,7 @@ export class GithubComponent implements OnInit {
   title = 'Github';
   user: User;
 
-  constructor(
-    private githubService: GithubService,
-    public repoService: GithubService
+  constructor(private githubService: GithubService,public repoService: GithubService
   ) {
     this.user = this.githubService.user;
   }
