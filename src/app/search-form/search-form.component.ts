@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class SearchFormComponent implements OnInit {
 
-  goToUrl(username){
-    this.router.navigate(['/github',username])
+  goToUrl(id){
+    this.router.navigate(['/view',id])
   }
   
   constructor(private githubService: UserServiceService, public repoService: UserServiceService,  private router:Router) {}

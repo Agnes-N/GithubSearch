@@ -1,8 +1,7 @@
 <form style="margin-top:25%">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Enter Github username" id="username" [(ngModel)]="username"
-            name="username" (keyup)='submitSearch($event)' required>
+        <input #input type="text" class="form-control" placeholder="Enter Github username" required>
     </div>
-    <button type="submit" class="btn btn-success" (click)="goToUrl">Search</button>
+    <button type="submit" class="btn btn-success" (click)="goToUrl(input.value)">Search</button>
     <hr class="my-4">
 </form>

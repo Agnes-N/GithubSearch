@@ -20,13 +20,13 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <!-- <div *ngFor="let repo of Repositories">
-                       <a (click)=goToCustomerPage() class="btn btn-primary">Go Back</a> -->
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="{{user.html_url}}"><strong>Repo Name: </strong>{{repo.name}}</a></li>
-                        <li class="list-group-item"><strong>Description: </strong>{{repo.description}}</li>
+                <!-- <a (click)=goToCustomerPage() class="btn btn-primary">Go Back</a> -->
+                       <div >
+                    <ul class="list-group" *ngFor="let j of repos">
+                        <li class="list-group-item"><a href="{{user.html_url}}"><strong>Repo Name: </strong>{{j.name}}</a></li>
+                        <li class="list-group-item"><strong>Description: </strong>{{j.description}}</li>
                     </ul>
-                <!-- </div> -->
+                </div> 
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 
 const routes: Routes = [
   { path: 'view', component: GithubComponent },
-  { path: 'github/:id', component: GithubComponent },
+  { path: 'view/:id', component: GithubComponent },
   { path: '', component: SearchFormComponent }];
 
 @NgModule({

@@ -17,7 +17,7 @@ export class GithubComponent implements OnInit {
   repoService: UserServiceService;
   title = 'Github';
   user: User;
-  repo: Reporsitory[];
+  repos: Reporsitory[];
 
   constructor(private githubService: UserServiceService,private router:ActivatedRoute) {
     // this.user = this.githubService.user;
@@ -31,6 +31,6 @@ export class GithubComponent implements OnInit {
     this.githubService.getProfileInfo(id)
 
     this.user = this.githubService.user
-    this.repo = this.githubService.repo
+    this.repos = this.githubService.repo
   }
 }
