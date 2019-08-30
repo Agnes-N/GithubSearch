@@ -1,13 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GithubComponent } from './github/github.component';
-import { AboutComponent } from './about/about.component';
 
-
-
-const routes: Routes = [
-  { path: 'githubSearch', component: GithubComponent },
-  { path: 'about', component: AboutComponent }];
+const routes: Routes = [ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
