@@ -10,20 +10,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { DateCountPipe } from './date-count.pipe';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     GithubComponent,
     SearchFormComponent,
-    DateCountPipe
-    
+    DateCountPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

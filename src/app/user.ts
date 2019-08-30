@@ -6,6 +6,6 @@ export class User {
         public avatar_url: string,
         public html_url: string,
         public public_repos: number,
-        public creation: Date
+        public created_at: Date
     ) { }
 }

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../user';
+import { User } from '../user';
+// import { GithubComponent } from 'github/github.component';
 import { UserServiceService } from "../services/user-service.service";
-
+import { Reporsitory } from '../reporsitory';
+// import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-github',
@@ -11,60 +14,23 @@ import { UserServiceService } from "../services/user-service.service";
 })
 export class GithubComponent implements OnInit {
 
+  repoService: UserServiceService;
   title = 'Github';
   user: User;
+  repo: Reporsitory[];
 
-  constructor(private githubService: UserServiceService) {
+  constructor(private githubService: UserServiceService,private router:ActivatedRoute) {
     // this.user = this.githubService.user;
   }
+
   ngOnInit() {
-    this.githubService.userRequest()
-    this.user= this.githubService.user
+    // this.githubService.getProfileInfo(name)
+    // this.repoService.getRepoInfo(name)
+
+    let id = this.router.snapshot.paramMap.get("id");
+    this.githubService.getProfileInfo(id)
+
+    this.user = this.githubService.user
+    this.repo = this.githubService.repo
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  // repo : Reporsitory[];
-  // profile: any[];
-  // repos: any[];
-
-  // constructor( private profileService: GithubService) {
-  //   this.profileService.getProfileInfo().subscribe(profile => {
-  //     console.log(profile);
-      // this.profile = profile;
-    // });
-  // }
-
-  // ngOnInit() {
-  // }
-
 }
