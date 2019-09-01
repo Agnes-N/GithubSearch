@@ -14,13 +14,9 @@ export class UserServiceService {
   user: User;
   repo: Reporsitory[];
 
-  private username: string;
-
   constructor(private http: HttpClient) {
     this.user = new User("", "", "", "", 0, new Date());
     this.repo = [];
-
-    // this.username = "Agnes-N";
   }
 
   getProfileInfo(name) {

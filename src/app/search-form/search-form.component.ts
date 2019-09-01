@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from "../services/user-service.service";
-// import { Reporsitory } from '../reporsitory';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,6 +13,7 @@ export class SearchFormComponent implements OnInit {
     this.router.navigate(['/view',id])
   }
   
-  constructor(private githubService: UserServiceService, public repoService: UserServiceService,  private router:Router) {}
-  ngOnInit() {}
-}
+  constructor(public repoService: UserServiceService,  private router:Router) {}
+  ngOnInit() {  }
+  }
+

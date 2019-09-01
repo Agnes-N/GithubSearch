@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { GithubService } from "../g-service/github.service";
 
 @Component({
   selector: 'app-root',

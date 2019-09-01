@@ -1,8 +1,12 @@
+<app-search-form></app-search-form>
 <div class="card">
     <div class="card-block">
+            
         <div class="row">
             <div class="col-md-5">
                 <img src="{{user.avatar_url}}">
+                <br><br>
+                <p class="text-center"><a href="{{user.html_url}}" target="_blank" class="btn btn-success">View Github profile</a></p>
             </div>
 
             <div class="col-md-7">
@@ -11,22 +15,19 @@
                     <li class="list-group-item"><strong>Name: </strong>{{user.name}}</li>
                     <li class="list-group-item"><strong>Repositories: </strong>{{ user.public_repos }}</li>
                     <li class="list-group-item"><strong>Creation Date : </strong>{{ user.created_at|date }}</li>
-                </ul>
-
-                <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success">View profile on Github</a></p>
+                </ul>  
             </div>
         </div>
 
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <!-- <a (click)=goToCustomerPage() class="btn btn-primary">Go Back</a> -->
-                       <div >
-                    <ul class="list-group" *ngFor="let j of repos">
-                        <li class="list-group-item"><a href="{{user.html_url}}"><strong>Repo Name: </strong>{{j.name}}</a></li>
-                        <li class="list-group-item"><strong>Description: </strong>{{j.description}}</li>
+                <div *ngFor="let repo of repos">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="{{user.html_url}}"><strong>Repo Name: </strong>{{repo.name}}</a></li>
+                        <li class="list-group-item"><strong>Description: </strong>{{repo.description}}</li>
                     </ul>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
