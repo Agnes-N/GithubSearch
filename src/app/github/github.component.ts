@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
 import { UserServiceService } from "../services/user-service.service";
 import { Reporsitory } from '../reporsitory';
@@ -12,21 +13,38 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class GithubComponent implements OnInit {
 
-  // repoService: UserServiceService;
-  title = 'Github';
-  user: User;
-  repos: Reporsitory[];
+  user:User;
 
-  constructor(private githubService: UserServiceService,private router:ActivatedRoute) {
+
+  constructor(private http:HttpClient, private githubService:UserServiceService){
+   this
   }
-
   ngOnInit() {
+    interface ApiResponse{
+      // user:string;
 
-    let id = this.router.snapshot.paramMap.get("id");
-    this.githubService.getProfileInfo(id)
-
-    this.user = this.githubService.user
-    this.repos = this.githubService.repo
-    
+    }
+    this.githubService.githubRequest(prompt)
+    this.user=this.githubService.user
   }
+   
 }
+
+  // repoService: UserServiceService;
+//   title = 'Github';
+//   user: User;
+//   repos: Reporsitory[];
+
+//   constructor(private githubService: UserServiceService,private router:ActivatedRoute) {
+//   }
+
+//   ngOnInit() {
+
+//     let id = this.router.snapshot.paramMap.get("id");
+//     this.githubService.getProfileInfo(id)
+
+//     this.user = this.githubService.user
+//     this.repos = this.githubService.repo
+    
+//   }
+// }
