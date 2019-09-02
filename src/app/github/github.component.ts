@@ -21,7 +21,6 @@ export class GithubComponent implements OnInit {
   }
   ngOnInit() {
     interface ApiResponse{
-      // user:string;
 
     }
     this.githubService.githubRequest(prompt)
@@ -29,22 +28,3 @@ export class GithubComponent implements OnInit {
   }
    
 }
-
-  // repoService: UserServiceService;
-//   title = 'Github';
-//   user: User;
-//   repos: Reporsitory[];
-
-//   constructor(private githubService: UserServiceService,private router:ActivatedRoute) {
-//   }
-
-//   ngOnInit() {
-
-//     let id = this.router.snapshot.paramMap.get("id");
-//     this.githubService.getProfileInfo(id)
-
-//     this.user = this.githubService.user
-//     this.repos = this.githubService.repo
-    
-//   }
-// }
