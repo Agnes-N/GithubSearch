@@ -1,13 +1,13 @@
 <div class="Search">
-    <div class="container">
+    <!-- <div class="container"> -->
 
         <div class="input-group">
-            <input #prompt type="text" class="form-control" placeholder="Enter username ..." required>
+            <input #prompt type="text" class="form-control" placeholder="Enter username ...">
             <span class="input-group-btn">
-                <button (click)="functionsearch(prompt.value)" class="btn btn-success" type="button" required>Search</button>
+                <button (click)="functionsearch(prompt.value)" class="btn btn-success" type="button">Search</button>
             </span>
         </div>
-    </div>
+    <!-- </div> -->
 
     <div class="row" style="margin-top: 3%">
         <div class="col-md-6">
@@ -21,8 +21,7 @@
                 <li class="list-group-item"><strong>Username: </strong>{{pop.login}}</li>
                 <li class="list-group-item"><strong>Name: </strong>{{pop.name}}</li>
                 <li class="list-group-item"><strong>Repositories: </strong>{{pop.public_repos}}</li>
-                <li class="list-group-item"><strong>Creation Date : </strong>{{pop.created_at|date}}</li><br>
-                
+                <li class="list-group-item"><strong>Creation Date : </strong>{{pop.created_at|date}}</li>
             </ul>
         </div>
     </div>
