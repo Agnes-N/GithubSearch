@@ -3,10 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GithubComponent } from './github/github.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 
-const routes: Routes = [
-  { path: 'view', component: GithubComponent },
-  { path: 'view/:id', component: GithubComponent },
-  { path: '', component: SearchFormComponent }];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

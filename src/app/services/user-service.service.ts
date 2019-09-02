@@ -20,6 +20,7 @@ export class UserServiceService {
   githubRequest(prompt) {
     interface ApiResponse {
       login: string,
+      name: string;
       avatar_url: string,
       public_repos: number
     };
@@ -27,6 +28,7 @@ export class UserServiceService {
     let promise = new Promise((resolve, reject) => {
       this.http.get<ApiResponse>("https://api.github.com/users/" + prompt + "?access_token=" + environment.key).toPromise().then(response => {
         this.user.login = response.login
+        this.user.name = response.name
         this.user.avatar_url = response.avatar_url
         this.user.public_repos = response.public_repos
         resolve()
@@ -40,8 +42,7 @@ export class UserServiceService {
   repositoryRequest(prompt) {
     interface ApiResponse {
       name: string,
-      description: string,
-      created_at: Date,
+      description: string
     };
 
     let promise = new Promise((resolve, reject) => {
@@ -49,7 +50,6 @@ export class UserServiceService {
         for (var p in response) {
           this.repository.push(new Reporsitory(response[p].name, response[p].description));
         }
-        // console.log(this.repository)
         resolve()
       },
         error => {
