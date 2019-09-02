@@ -1,27 +1,43 @@
-# Github
+# Github user search website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+Github user search is a web application that is used to search a user who is on github and view her/his github profile, see the reporsitories that you have and their description. 2nd Sept 2019.
+
+## Author
+
+Agnes Nyiramisigaro
+
+## Description
+
+Github user search is a web application that is used to search a user who is on github and view her/his github profile, see the reporsitories that you have and their description.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Behavior Driven Development
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To be able to search a user on github and view all his informations, the projects they have made and their profile.
 
-## Build
+### Input
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Enter a username you use on github on search form.
 
-## Running unit tests
+### Output
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+View user profile photo and their informations and their profile.
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+It used HTML, CSS,TypeScript, Javascript, Bootstrap and Angular.
 
-## Further help
+## Support and contact details
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For any issues or questions, ideas or concern, please contact me on my e-mail: aggyreina@gmail.com.
+
+### License
+
+MIT license
+
+Copyright (c) 2019 Moringa School
+
+Created with all the love in the world, enjoy it is free of charge.
